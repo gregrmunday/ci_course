@@ -25,7 +25,6 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Run coverage tests and generate report
-      uses: pytest
       run: |
         pytest --cov --cov-branch --cov-report=xml
     - name: Upload coverage reports to Codecov
